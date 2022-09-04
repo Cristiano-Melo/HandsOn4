@@ -10,7 +10,7 @@ export class User {
     iduser: number
 
     @Column()
-    @Length(1, 70)
+    @Length(4, 70)
     @IsNotEmpty()
     name: string
 
@@ -23,7 +23,7 @@ export class User {
     @IsNotEmpty()
     apartment: number
 
-    @Column({})
+    @Column()
     @Length(8, 120)
     @IsNotEmpty()
     password: string
@@ -33,12 +33,16 @@ export class User {
     role: string
 
     @Column()
+    @Length(1,1000)
+    userimg: string
+
+    @Column()
     @CreateDateColumn()
     created_at: Date
 
     @Column()
     @UpdateDateColumn()
-    updated_ate: Date
+    updated_at: Date
 
     @OneToMany(() => Post, (post) => post.user)
     posts: Post[]

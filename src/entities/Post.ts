@@ -8,17 +8,17 @@ export class Post {
     @PrimaryGeneratedColumn()
     idpost: number
 
-    @Column({type: "text"})
+    @Column("varchar", {length: 300})
     @Length(1, 300)
     content: string
 
-    @Column({type: "date"})
+    @Column()
     @CreateDateColumn()
     created_at: Date
 
-    @Column({type: "date"})
+    @Column()
     @UpdateDateColumn()
-    updated_ate: Date
+    updated_at: Date
 
     @ManyToOne(() => User, user => user.posts)
     @JoinColumn({name: "user_id"})
