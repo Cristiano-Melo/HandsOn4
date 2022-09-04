@@ -1,12 +1,16 @@
 import express from 'express';
-import { resolve } from 'path';
 import { AppDataSource } from './data-source';
+import routes from './routes';
 
 AppDataSource.initialize().then(()=>{
     const app = express();
 
     app.use(express.json());
 
-    app.listen(process.env.PORT)
+    app.use(routes);
+
+    app.listen(3030, () => {
+        console.log("Server started on por 3030")
+    })
 
 });
