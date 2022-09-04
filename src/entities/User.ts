@@ -9,30 +9,34 @@ export class User {
     @PrimaryGeneratedColumn()
     iduser: number
 
-    @Column({type: "varchar"})
+    @Column()
     @Length(1, 70)
     @IsNotEmpty()
     name: string
 
-    @Column({type: "varchar"})
-    @Length(70)
+    @Column()
+    @Length(8, 70)
     @IsNotEmpty()
     email: string
 
-    @Column({type: "integer"})
+    @Column()
     @IsNotEmpty()
     apartment: number
 
-    @Column({type: "varchar"})
+    @Column({})
     @Length(8, 120)
     @IsNotEmpty()
     password: string
 
-    @Column({type: "date"})
+    @Column()
+    @IsNotEmpty()
+    role: string
+
+    @Column()
     @CreateDateColumn()
     created_at: Date
 
-    @Column({type: "date"})
+    @Column()
     @UpdateDateColumn()
     updated_ate: Date
 
