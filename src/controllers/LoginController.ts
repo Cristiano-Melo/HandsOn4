@@ -2,12 +2,6 @@ import { userRepository } from './../repositories/userRepository';
 import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-
-
-type JwtPayLoad = {
-    id: number
-}
-
 export class LoginController {
    async login(req: Request, res: Response){
         const { email, password } = req.body;
@@ -38,25 +32,9 @@ export class LoginController {
    }
 
    async getProfiles(req: Request, res: Response){
-    const { authorization } = req.headers;
-    
-    if (!authorization){
-        return res.status(403).json({message: "O Usuário não está logado!"});
-    }
-
-    const token = authorization.split(" ")[1];
-
-    const { id }  = jwt.verify(token, process.env.JWT_PASS ?? "") as JwtPayLoad;
-    const id2 : any = id;
-
-    console.log(id2);
     
 
-    const user = await userRepository.findOneOrFail({where: id2 });
+    return res.json(req.user);
 
-    if(!user) {
-        return res.status(403).json({message: "Não Autorizado"});
-    }
-    
 }
 }
