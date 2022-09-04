@@ -8,6 +8,8 @@ const routes = Router()
 routes.post("/user", new UserController().create)
 routes.post("/login", new LoginController().login)
 
-routes.get("/profile", authMiddleware, new LoginController().getProfiles)
+routes.use(authMiddleware); // todas as rotas abaixo deste Middleware precisarão de autenticação
+
+routes.get("/profile", new LoginController().getProfiles)
 
 export default routes
