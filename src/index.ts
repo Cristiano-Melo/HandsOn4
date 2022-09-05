@@ -9,8 +9,8 @@ AppDataSource.initialize().then(()=>{
 
     app.use(routes);
 
-    app.listen(3030, () => {
-        console.log("Server started on por 3030")
+    app.listen(3005, () => {
+        console.log("Server started on por 3005")
     })
 
 });
