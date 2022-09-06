@@ -6,7 +6,6 @@ type JwtPayLoad = {
     id: number
 }
 
-
 export const authMiddleware = async (req: Request, res: Response, next: NextFunction) => {
     const { authorization } = req.headers;
     
