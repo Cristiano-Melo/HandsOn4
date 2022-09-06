@@ -14,9 +14,7 @@ export class PostController{
         }) ;
         await postRepository.save(newPost);
 
-        return res.json({
-            content,
-        })  ;
+        return res.json(newPost)  ;
 }
 //async getPosts(req: Request, res: Response){
     //const userPosts = await postRepository.findBy({id_user});
