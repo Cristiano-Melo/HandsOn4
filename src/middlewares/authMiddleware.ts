@@ -6,7 +6,6 @@ type JwtPayLoad = {
     id: number
 }
 
-
 export const authMiddleware = async (req: Request, res: Response, next: NextFunction) => {
     const { authorization } = req.headers;
     
@@ -18,9 +17,9 @@ export const authMiddleware = async (req: Request, res: Response, next: NextFunc
 
     const { id }  = jwt.verify(token, process.env.JWT_PASS ?? "") as JwtPayLoad;
 
-    const id2 : any = id;
+    const user = await userRepository.findOneOrFail({where:{iduser: id}
+    });
 
-    const user = await userRepository.findOneOrFail({where: id2 });
 
     if(!user) {
         return res.status(403).json({message: "Não Autorizado"});
