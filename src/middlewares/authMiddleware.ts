@@ -17,7 +17,7 @@ export const authMiddleware = async (req: Request, res: Response, next: NextFunc
 
     const { id }  = jwt.verify(token, process.env.JWT_PASS ?? "") as JwtPayLoad;
 
-    const user = await userRepository.findOneOrFail({where: <any>id });
+    const user = await userRepository.findOneOrFail({where:{iduser: id}});
 
     if(!user) {
         return res.status(403).json({message: "Não Autorizado"});
