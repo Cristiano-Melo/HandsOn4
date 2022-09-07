@@ -19,7 +19,6 @@ export const authMiddleware = async (req: Request, res: Response, next: NextFunc
 
     const user = await userRepository.findOneOrFail({where:{iduser: id}});
 
-
     if(!user) {
         return res.status(403).json({message: "Não Autorizado"});
     }
