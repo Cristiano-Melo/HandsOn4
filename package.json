@@ -49,6 +49,8 @@
   
   "resolutions": { "fs-capacitor": "3.0.0" },
 
+  "Access-Control-Allow-Origin": "*",
+
   "homepage": "https://github.com/Cristiano-Melo/HandsOn4#readme",
   "description": ""
 }
