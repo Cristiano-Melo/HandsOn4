@@ -9,7 +9,7 @@ const class_validator_1 = require("class-validator");
 const bcrypt_1 = __importDefault(require("bcrypt"));
 class UserController {
     async create(req, res) {
-        const { name, email, apartment, password, role, userimg } = req.body;
+        const { name, email, apartment, password } = req.body;
         const userExists = await userRepository_1.userRepository.findOneBy({ email });
         if (userExists) {
             return res.status(400).json({ message: "Email já cadastrado!" });

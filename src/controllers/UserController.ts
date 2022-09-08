@@ -6,7 +6,7 @@ import bcrypt from "bcrypt";
 
 export class UserController {
     async create(req: Request, res: Response){
-        const { name, email, apartment, password, role, userimg } = req.body;
+        const { name, email, apartment, password } = req.body;
 
         const userExists = await userRepository.findOneBy({email});
 
