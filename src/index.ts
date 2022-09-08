@@ -2,6 +2,7 @@ import express from 'express';
 import { AppDataSource } from './data-source';
 import routes from './routes';
 
+const port = process.env.PORT || 3005
 AppDataSource.initialize().then(()=>{
     const app = express();
 
@@ -9,8 +10,8 @@ AppDataSource.initialize().then(()=>{
 
     app.use(routes);
 
-    app.listen(3005, () => {
-        console.log("Server started on por 3030")
+    app.listen(port, () => {
+        console.info("Server started on http://localhost:"+port)
     })
 
 });
