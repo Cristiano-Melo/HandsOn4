@@ -33,7 +33,7 @@ export class UserController {
 
     async editUser (req: Request, res: Response) {
 		const { name, apartment, email, role, password } = req.body
-		const iduser : number = parseInt(req.params.idUser)
+		const iduser= req.user.iduser
 		let user : User
 
 		try {
