@@ -6,6 +6,7 @@
     "dev": "nodemon --exec ts-node ./src/index.ts",
     "migration:generate": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:generate ./src/migrations/default",
     "migration:run": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:run",
+    "seed": "ts-node ./node_modules/typeorm-extension/dist/cli/index.js seed -d ./src/data-source.ts",
     "test": "jest",
     "start": "node dist/src/index.js"
   },
@@ -31,7 +32,8 @@
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.3.9"
+    "typeorm": "^0.3.9",
+    "typeorm-extension": "^2.1.10"
   },
   "repository": {
     "type": "git",
