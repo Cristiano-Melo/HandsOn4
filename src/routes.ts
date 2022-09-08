@@ -12,6 +12,7 @@ routes.post("/login", new LoginController().login)
 routes.use(authMiddleware); // todas as rotas abaixo deste Middleware precisarão de autenticação
 routes.post("/post", new PostController().post)
 routes.get("/profile", new LoginController().getProfiles)
+routes.get("/post", new PostController().getPosts)
 routes.put("/edituser", new UserController().editUser)
 
 export default routes
