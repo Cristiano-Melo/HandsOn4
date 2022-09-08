@@ -1,9 +1,11 @@
+import { User } from './../entities/User';
 import { postRepository } from './../repositories/postRepository';
 import { Post } from './../entities/Post';
 import { userRepository } from './../repositories/userRepository';
 import { Request, Response } from "express";
 import { authMiddleware } from '../middlewares/authMiddleware'; 
 import { Console } from 'console';
+import { Any } from 'typeorm';
 export class PostController{
     async post(req: Request, res: Response){
 
@@ -20,9 +22,31 @@ export class PostController{
 
         return res.json(newPost)  ;
 }
-//async getPosts(req: Request, res: Response){
-    //const userPosts = await postRepository.findBy({id_user});
+async getAllPosts (req: Request, res: Response) {
+    const posts = await postRepository.find({
+        relations: {
+            user: true
+        },
+        select: {
+            user: {
+                iduser: true,
+                name: true,
+                email: true,
+                apartment: true,
+                userimg:true,
+            }
+        }
+    });
+    return res.status(200).json(posts);
+}
+async getPosts(req: Request, res: Response){
+    const idAtual = req.user.iduser;
+    const userPosts = await postRepository.find({
+        where:{
+                user:{
+                        iduser:idAtual
+                }   
+        }});
     
 
-  //  return res.json(req.post);}}
-}
+return res.json(userPosts);}}
