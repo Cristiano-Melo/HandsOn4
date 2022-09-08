@@ -1,11 +1,5 @@
-import { User } from './../entities/User';
 import { postRepository } from './../repositories/postRepository';
-import { Post } from './../entities/Post';
-import { userRepository } from './../repositories/userRepository';
 import { Request, Response } from "express";
-import { authMiddleware } from '../middlewares/authMiddleware'; 
-import { Console } from 'console';
-import { Any } from 'typeorm';
 export class PostController{
     async post(req: Request, res: Response){
 
