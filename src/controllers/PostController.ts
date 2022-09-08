@@ -33,7 +33,6 @@ async getAllPosts (req: Request, res: Response) {
                 name: true,
                 email: true,
                 apartment: true,
-                userimg:true,
             }
         }
     });
