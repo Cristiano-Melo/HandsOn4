@@ -33,10 +33,6 @@ export class User {
     role: string
 
     @Column()
-    @Length(1,1000)
-    userimg: string
-
-    @Column()
     @CreateDateColumn()
     created_at: Date
 
