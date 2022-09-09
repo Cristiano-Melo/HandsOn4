@@ -13,7 +13,7 @@ Este projeto possuem duas formas de serem testados. A primeira forma, seria atra
 
 https://handson4-parrot.herokuapp.com
 
-Para testar a aplicação será necessário o usu do Insomnia (Instalado na máquina) através do botão abaixo: 
+Para testar a aplicação será necessário o uso do Insomnia (Instalado na máquina) através do botão abaixo: 
 <p align = 'center'><a href="https://insomnia.rest/run/?label=api-parrot&uri=https%3A%2F%2Fraw.githubusercontent.com%2FCristiano-Melo%2FHandsOn4%2Fmaster%2Fdocs%2FInsomnia_2022-09-08.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a></p>
 
 A segunda opção é rodar a aplicação localmente na sua máquina, seguindo os seguintes requisitos:
