@@ -57,7 +57,7 @@ Para acessar a documentação da API, será necessário executar um live server 
 
 *⌨️ com ❤️ por **Cristiano Melo** - *Node.JS / TypeScript - Documentação* - [Cristiano Melo](https://github.com/Cristiano-Melo)<br>
 *⌨️ com ❤️ por **Leonardo Maia** - *Node.JS / TypeScript - [Leonardo Maia](https://github.com/LeoMPG)<br>
-*⌨️ com ❤️ por **Leonardo Maia** - *ReactJS - [Fernando Torreal]((https://github.com/froyalt))
+*⌨️ com ❤️ por **Fernando Torreal** - *ReactJS - [Fernando Torreal]((https://github.com/froyalt))
 
 ## 🎁 Expressões de gratidão
 
