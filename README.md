@@ -7,6 +7,8 @@ entre os moradores.
 
 ## 🚀 Começando
 
+Antes de começcar dê uma olhada no nosso projeto de Front-End desta API (https://github.com/froyalt/parrot-social-network).
+
 Este projeto possuem duas formas de serem testados. A primeira forma, seria através da API publicada online através do serviço da @heroku através do link abaixo:
 
 https://handson4-parrot.herokuapp.com
@@ -53,8 +55,9 @@ Para acessar a documentação da API, será necessário executar um live server 
 
 ## ✒️ Autores
 
-*⌨️ com ❤️ por **Cristiano Melo** - *Node.JS - Documentação* - [Cristiano Melo](https://github.com/Cristiano-Melo)<br>
-*⌨️ com ❤️ por **Leonardo Maia** - *Node.JS - Documentação* - [Leonardo Maia](https://github.com/LeoMPG)
+*⌨️ com ❤️ por **Cristiano Melo** - *Node.JS / TypeScript - Documentação* - [Cristiano Melo](https://github.com/Cristiano-Melo)<br>
+*⌨️ com ❤️ por **Leonardo Maia** - *Node.JS / TypeScript - [Leonardo Maia](https://github.com/LeoMPG)<br>
+*⌨️ com ❤️ por **Leonardo Maia** - *ReactJS - [Fernando Torreal]((https://github.com/froyalt))
 
 ## 🎁 Expressões de gratidão
 
